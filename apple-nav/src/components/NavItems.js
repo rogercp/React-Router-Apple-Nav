@@ -1,10 +1,12 @@
 import React from 'react';
+import NavItem from "./NavItem"
 
-
-const NavItems=()=> {
+const NavItems=(props)=> {
     return (
-      <div >
-       
+      <div style={{display:"flex",justifyContent:"space-around"}} >
+       {props.myData.map((item,i)=>(
+           <NavItem key={item.navName} item={item}/>
+       ))}
       </div>
     );
   }

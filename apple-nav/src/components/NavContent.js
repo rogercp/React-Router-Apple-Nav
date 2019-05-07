@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {tabData,mydata} from './mydata';
 import Tabs from "./tabs"
+import NavItems from "./NavItems"
+import { Route } from 'react-router-dom';
 
 class NavContent extends Component {
     constructor() {
@@ -10,6 +12,7 @@ class NavContent extends Component {
         myData:[]
       };
     }
+
     componentDidMount(){
         this.setState({tabData:tabData});
         this.setState({myData:mydata});
@@ -18,10 +21,13 @@ class NavContent extends Component {
        
       return (
         <div className="App">
-
-        <Tabs tabData={this.state.tabData}/>
-        {/* <NavITems/> */}
-         
+        <Route exact path="/" render={props=>(
+            <Tabs {...props} tabData={this.state.tabData}/>
+        )}/>
+        <Route  path="/navitems/:id" render={props=>(
+            <NavItems {...props} myData={this.state.myData}/>
+        )}/>
+        
         </div>
       );
     }

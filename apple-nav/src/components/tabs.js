@@ -4,7 +4,7 @@ import Tab from "./tab"
 
 const Tabs=(props)=> {
     return (
-      <div>
+      <div style={{display:"flex",justifyContent:"space-around",marginTop:"20px"}}>
        {props.tabData.map((tab,i)=>(
            <Tab key={i} tab={tab}/>
        ))}
