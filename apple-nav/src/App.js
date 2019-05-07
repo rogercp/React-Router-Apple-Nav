@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
+import NavContent from './components/NavContent'
 
 
-function App() {
-  return (
-    <div className="App">
-     
-    </div>
-  );
-}
+  function App() {
+    return (
+      <div className="App">
+       <NavContent />
+      </div>
+    );
+  }
+
+
 
 export default App;

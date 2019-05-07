@@ -1,7 +1,11 @@
-const mydata=[
+
+export const tabData=["iphone","imac","macbook","ipad"];
+
+
+export const mydata=[
 
 {
-    navName:"phone",
+    navName:"iphone",
     items:[
         {
         name:"iphone",
